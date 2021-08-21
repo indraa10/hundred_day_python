@@ -1,0 +1,29 @@
+##Day : 06
+
+##https://reeborg.ca/reeborg.html
+
+# problem: Home 4
+def turn_right():
+    for i in range(1,4):
+        turn_left()
+
+def move_till_wall():
+    for i in range(1,4):
+        move()
+    
+def quarter_location():
+    move_till_wall()
+    turn_left()
+    move_till_wall()
+    turn_right()
+    move()
+    turn_right()
+
+def final_location():
+    for i in range(3):
+        quarter_location()
+    move_till_wall()
+    turn_left()
+    move_till_wall()
+        
+final_location()
